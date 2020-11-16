@@ -17,11 +17,21 @@
 
 </head>
 <body class="container">
-    <h1>자기소개</h1>
-    <textarea class="form-control" rows="5" id="jaso">저, 서-정-익의 자기소개서 입니다.</textarea>
+    <h1>또르빗슈</h1>
+    <textarea onkeydown='counter();' class='form-control' rows='5' id='jaso'></textarea>
+    <span id='count'>(0/200)</span>
     <script>
-        let content = document.getElementById('jaso').value;
-        console.log(content);
+        function counter(){
+            let content = document.getElementById('jaso').value;
+            if (content.length > 200) {
+                alert('200자 초과하였습니다!! ');
+                content = content.substring(0,200);
+                document.getElementById('jaso').value = content;
+            }
+            document.getElementById('count').innerHTML = '(' + content.length + '/200)';
+        };
+        counter();
     </script>
+
 </body>
 </html>
