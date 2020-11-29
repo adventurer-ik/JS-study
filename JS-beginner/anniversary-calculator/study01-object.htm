@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object</title>
+</head>
+<body>
+    <h1>Object</h1>
+
+    <script>
+        //JS는 object로 이루어져있다 해도 과언이 아님
+        //객체 안에 배열, 함수, 값 다 들어갈 수 있음.
+
+        let person = {
+            name: 'IK',
+            sayHello: function(){
+                console.log('hello');
+            }
+        }
+        let p = person;
+
+        console.log('object p: '+ JSON.stringify(p));
+        //console.log('object p: '+ JSON.parse(p));
+        console.log(p)
+        console.log(p.name);
+        p.sayHello();
+    </script>
+    
+</body>
+</html>
